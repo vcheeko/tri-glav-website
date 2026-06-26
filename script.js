@@ -1,23 +1,28 @@
 const revealItems = document.querySelectorAll(".reveal");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
-const navLinks = document.querySelectorAll(".site-nav a");
-const contactForm = document.getElementById("contact-form");
-const formStatus = document.getElementById("form-status");
+const navLinks = document.querySelectorAll(".site-nav a, .header-cta");
 const siteHeader = document.querySelector(".site-header");
+const storyPathLine = document.querySelector(".story-path-line");
+const storySection = document.querySelector(".story-section");
 
 document.body.classList.add("has-js");
+
+const getScrollOffset = () => {
+  const headerHeight = siteHeader ? siteHeader.offsetHeight : 88;
+  return headerHeight + 16;
+};
 
 const syncHeaderState = () => {
   if (!siteHeader) {
     return;
   }
 
-  siteHeader.classList.toggle("is-scrolled", window.scrollY > 18);
+  siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
 };
 
 const scrollToHashTarget = (hash, behavior = "smooth") => {
-  if (!hash) {
+  if (!hash || hash === "#") {
     return;
   }
 
@@ -26,8 +31,7 @@ const scrollToHashTarget = (hash, behavior = "smooth") => {
     return;
   }
 
-  const compactHeader = window.innerWidth <= 860 ? 150 : 118;
-  const targetTop = target.getBoundingClientRect().top + window.scrollY - compactHeader;
+  const targetTop = target.getBoundingClientRect().top + window.scrollY - getScrollOffset();
   window.scrollTo({ top: Math.max(targetTop, 0), behavior });
 };
 
@@ -37,24 +41,51 @@ revealItems.forEach((item) => {
 });
 
 if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver((entries, revealObserver) => {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         return;
       }
 
       entry.target.classList.add("visible");
-      revealObserver.unobserve(entry.target);
+      observer.unobserve(entry.target);
     });
   }, {
-    threshold: 0.18,
-    rootMargin: "0px 0px -8% 0px"
+    threshold: 0.12,
+    rootMargin: "0px 0px -6% 0px"
   });
 
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  if (storyPathLine && storySection) {
+    const pathObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        storyPathLine.classList.toggle("is-visible", entry.isIntersecting);
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: "0px"
+    });
+
+    pathObserver.observe(storySection);
+  }
 } else {
   revealItems.forEach((item) => item.classList.add("visible"));
+
+  if (storyPathLine) {
+    storyPathLine.classList.add("is-visible");
+  }
 }
+
+const closeMobileMenu = () => {
+  if (!siteNav || !menuToggle) {
+    return;
+  }
+
+  siteNav.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("menu-open");
+};
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
@@ -64,62 +95,34 @@ if (menuToggle && siteNav) {
   });
 
   navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("menu-open");
-
+    link.addEventListener("click", (event) => {
       const href = link.getAttribute("href");
+
       if (href && href.startsWith("#")) {
+        event.preventDefault();
+        closeMobileMenu();
         window.setTimeout(() => scrollToHashTarget(href), 30);
+      } else {
+        closeMobileMenu();
       }
     });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileMenu();
+    }
   });
 }
 
 syncHeaderState();
 window.addEventListener("scroll", syncHeaderState, { passive: true });
+window.addEventListener("resize", syncHeaderState, { passive: true });
+
 window.addEventListener("load", () => {
   syncHeaderState();
 
   if (window.location.hash) {
-    window.setTimeout(() => scrollToHashTarget(window.location.hash, "auto"), 80);
+    window.setTimeout(() => scrollToHashTarget(window.location.hash, "auto"), 100);
   }
 });
-
-if (contactForm && formStatus) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(contactForm);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const context = String(formData.get("context") || "").trim();
-    const message = String(formData.get("message") || "").trim();
-
-    if (!name || !email || !message) {
-      formStatus.textContent = "Izpolni ime, e-pošto in sporočilo.";
-      formStatus.classList.remove("is-success");
-      formStatus.classList.add("is-error");
-      return;
-    }
-
-    const subject = encodeURIComponent(`TRI-GLAV pilotni dostop - ${name}`);
-    const body = encodeURIComponent(
-      [
-        `Ime: ${name}`,
-        `E-pošta: ${email}`,
-        context ? `Telefon ali organizacija: ${context}` : "",
-        "",
-        "Sporočilo:",
-        message
-      ].filter(Boolean).join("\n")
-    );
-
-    formStatus.textContent = "Odpiram pripravljen e-mail za info@tri-glav.si.";
-    formStatus.classList.remove("is-error");
-    formStatus.classList.add("is-success");
-
-    window.location.href = `mailto:info@tri-glav.si?subject=${subject}&body=${body}`;
-  });
-}

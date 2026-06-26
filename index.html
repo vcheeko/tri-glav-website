@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TRI-GLAV | Varno na poti. Varno domov.</title>
-  <meta name="description" content="TRI-GLAV je premium gorski navigator za varnejše poti: offline navigacija, opozorila, vreme, SOS pomoč in lokalno znanje za planince.">
-  <meta name="keywords" content="TRI-GLAV, tri-glav.si, gorski navigator, planinstvo, offline navigacija, vreme, varnost v gorah">
+  <meta name="description" content="TRI-GLAV je premium gorski varnostni ekosistem: skupnost, tehnologija in človečnost za varnejše poti v gorah.">
+  <meta name="keywords" content="TRI-GLAV, tri-glav.si, gorski navigator, planinstvo, varnost v gorah, SOS pomoč, ekosistem">
   <meta name="author" content="TRI-GLAV">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#0a223f">
@@ -15,17 +15,17 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TRI-GLAV">
   <meta property="og:title" content="TRI-GLAV | Varno na poti. Varno domov.">
-  <meta property="og:description" content="Pametni gorski navigator za varnejše doživetje v gorah, tudi brez signala.">
+  <meta property="og:description" content="Skupnost. Tehnologija. Človečnost. Varnostni ekosistem za planince in obiskovalce gora.">
   <meta property="og:url" content="https://tri-glav.si/">
   <meta property="og:image" content="https://tri-glav.si/assets/bottom-hero.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TRI-GLAV | Varno na poti. Varno domov.">
-  <meta name="twitter:description" content="Offline navigacija, opozorila, vreme in SOS pomoč za pametnejši korak v gore.">
+  <meta name="twitter:description" content="Skupnost. Tehnologija. Človečnost. Varnostni ekosistem za planince.">
   <meta name="twitter:image" content="https://tri-glav.si/assets/bottom-hero.png">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -40,230 +40,293 @@
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Odpri meni">
         <span></span>
         <span></span>
+        <span></span>
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="Glavna navigacija">
         <a href="#zgodba">Zgodba</a>
-        <a href="#funkcije">Funkcije</a>
-        <a href="#aplikacija">Aplikacija</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#zakaj-tri-glav">Zakaj TRI-GLAV</a>
+        <a href="#ekosistem">Ekosistem</a>
+        <a href="#pilot-slovenija">Pilot Slovenija</a>
+        <a href="#podpora">Podpora</a>
+        <a href="#pridruzi-se">Pridruži se</a>
       </nav>
 
-      <a class="header-cta" href="#kontakt">Pilotni dostop</a>
+      <a class="header-cta" href="#podpora">PODPRI NAŠO POT</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-backdrop" aria-hidden="true"></div>
-      <div class="hero-grid">
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,64 C240,120 480,0 720,48 C960,96 1200,24 1440,64 L1440,120 L0,120 Z" fill="#f4f6f8"/>
+        </svg>
+      </div>
+      <div class="hero-inner">
         <div class="hero-copy reveal" data-delay="0">
-          <p class="eyebrow">TRI-GLAV</p>
-          <h1>Varno na poti. Varno domov.</h1>
-          <p class="hero-lead">Pametni gorski navigator, ki združi offline navigacijo, lokalno znanje, vremenska opozorila in SOS pomoč, ko je v gorah pomembna prava informacija.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#aplikacija">Prenesi aplikacijo</a>
-            <a class="btn btn-secondary" href="#zgodba">Poglej zgodbo</a>
-          </div>
-          <ul class="hero-points">
-            <li>Offline poti in orientacija brez signala</li>
-            <li>Opozorila za nevarnosti in spremembe razmer</li>
-            <li>Skupnost planincev in lokalno preverjeno znanje</li>
-          </ul>
-        </div>
-
-        <div class="hero-visual reveal" data-delay="140">
-          <div class="hero-logo-card">
-            <img src="assets/logo-main.png" alt="TRI-GLAV znak" width="405" height="418" loading="eager" decoding="async">
-          </div>
-          <div class="hero-story-card">
-            <img src="assets/hero-story.jpg" alt="TRI-GLAV zgodba v gorah" width="1024" height="337" fetchpriority="high">
-            <div class="hero-story-overlay">
-              <strong>Jože. Maria. Pierre.</strong>
-              <span>Trije pogledi na isto pot. En cilj: varna vrnitev.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="trust-strip reveal" data-delay="40">
-      <div>Offline navigacija</div>
-      <div>Vreme in opozorila</div>
-      <div>SOS pomoč</div>
-      <div>Lokalno znanje</div>
-    </section>
-
-    <section class="section intro" id="zgodba">
-      <div class="section-heading reveal" data-delay="0">
-        <p class="eyebrow">Zgodba TRI-GLAV</p>
-        <h2>Jože pozna pot. Maria ima internet. Pierre ima Google Maps.</h2>
-        <p>V gorah ne zmaga najhitrejša aplikacija, ampak najbolj zanesljiva informacija. TRI-GLAV poveže izkušnje domačinov, aktualne razmere in orodja, ki delujejo tudi brez mobilnega signala.</p>
-      </div>
-
-      <div class="story-showcase reveal" data-delay="40">
-        <div class="story-poster">
-          <img src="assets/story-full.jpg" alt="Celotna TRI-GLAV zgodba z Jožetom, Mario in Pierrom" width="1024" height="1536" loading="lazy" decoding="async">
-        </div>
-        <div class="story-summary">
-          <article>
-            <span>01</span>
-            <h3>Tri pogledi, ena prava odločitev</h3>
-            <p>Jože pozna teren, Maria zaupa internetu, Pierre navigaciji. TRI-GLAV vse tri poglede poveže v bolj zanesljivo planinsko izkušnjo.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Ko signal odpove, priprava ostane</h3>
-            <p>Offline poti, opozorila in lokalno znanje pomagajo ravno takrat, ko je v gorah najmanj prostora za napačen korak.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Prava pot vodi varno domov</h3>
-            <p>TRI-GLAV ni le zemljevid. Je premišljen sopotnik za vreme, nevarnosti, skupnost in varnejše odločitve na poti.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section statement reveal" data-delay="40">
-      <div class="statement-card">
-        <p class="eyebrow">Zakaj TRI-GLAV</p>
-        <h2>Gore niso ceste.</h2>
-        <p>Prava aplikacija za gore ne kaže le smeri. Razume razmere, teren in trenutek, ko potrebuješ pomoč ali boljšo odločitev.</p>
-      </div>
-    </section>
-
-    <section class="section features" id="funkcije">
-      <div class="section-heading reveal" data-delay="0">
-        <p class="eyebrow">Funkcije</p>
-        <h2>Vse, kar planinec potrebuje pred odhodom in med potjo.</h2>
-        <p>TRI-GLAV je zasnovan za teren, ne samo za zaslon. Vsaka funkcija podpira mirnejšo pripravo in samozavestnejšo odločitev v ključnem trenutku.</p>
-      </div>
-
-      <div class="feature-grid">
-        <article class="feature-card reveal" data-delay="40">
-          <div class="feature-icon">01</div>
-          <h3>Offline navigacija</h3>
-          <p>Zemljevidi in ključne poti ostanejo dosegljivi tudi brez podatkovne povezave.</p>
-        </article>
-        <article class="feature-card reveal" data-delay="80">
-          <div class="feature-icon">02</div>
-          <h3>Vreme v kontekstu poti</h3>
-          <p>Opozorila so vezana na razmere v gorah, ne le na splošno vremensko napoved.</p>
-        </article>
-        <article class="feature-card reveal" data-delay="120">
-          <div class="feature-icon">03</div>
-          <h3>Nevarnosti in zapore</h3>
-          <p>Plazovi, poškodovani odseki, požari in druga opozorila so jasno vidna še pred odhodom.</p>
-        </article>
-        <article class="feature-card reveal" data-delay="160">
-          <div class="feature-icon">04</div>
-          <h3>SOS pomoč</h3>
-          <p>Ko je pomembna hitrost, dostopaš do nujnih informacij in hitrih akcij z manj koraki.</p>
-        </article>
-        <article class="feature-card reveal" data-delay="200">
-          <div class="feature-icon">05</div>
-          <h3>Skupnost planincev</h3>
-          <p>Aktualne informacije s poti pridejo od ljudi, ki so tam danes, ne prejšnjo sezono.</p>
-        </article>
-        <article class="feature-card reveal" data-delay="240">
-          <div class="feature-icon">06</div>
-          <h3>Lokalno znanje</h3>
-          <p>Domače izkušnje dopolnijo digitalne podatke in pomagajo pri boljši presoji na terenu.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section app-section" id="aplikacija">
-      <div class="app-shell">
-        <div class="app-copy reveal" data-delay="0">
-          <p class="eyebrow">Aplikacija</p>
-          <h2>Premium orodje za pametnejši korak v gore.</h2>
-          <p>TRI-GLAV nastaja kot mobilni sopotnik za planince, vodnike in obiskovalce gora, ki želijo zanesljivo pripravo, boljši pregled nad razmerami in enostaven dostop do pomoči.</p>
-
-          <div class="store-row">
-            <a class="store-badge google-play" href="#kontakt" aria-label="Prijavi zanimanje za Google Play">
-              <span>Kmalu na voljo</span>
-              <strong>Google Play</strong>
-            </a>
-            <a class="store-badge app-store" href="#kontakt" aria-label="Prijavi zanimanje za App Store">
-              <span>Kmalu na voljo</span>
-              <strong>App Store</strong>
-            </a>
-          </div>
-
-          <div class="app-meta">
-            <div>
-              <strong>Pilotni dostop</strong>
-              <span>Za prve testne uporabnike in partnerje.</span>
-            </div>
-            <div>
-              <strong>QR povezava</strong>
-              <span>Skeniraj in odpri tri-glav.si na telefonu.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="app-visual reveal" data-delay="120">
-          <div class="phone-frame">
-            <img src="assets/splash-screen.png" alt="TRI-GLAV mobilna aplikacija" width="207" height="359" loading="lazy" decoding="async">
-          </div>
-          <a class="qr-card" href="https://tri-glav.si/" target="_blank" rel="noopener">
-            <img src="assets/qr-placeholder.png" alt="QR za tri-glav.si" width="360" height="360" loading="lazy" decoding="async">
-            <span>Odpri tri-glav.si</span>
+          <p class="hero-brand" id="hero-title">TRI-GLAV</p>
+          <h1 class="hero-slogan">Varno na poti. Varno domov.</h1>
+          <p class="hero-tagline">Skupnost. Tehnologija. Človečnost.</p>
+          <a class="btn btn-hero" href="#zgodba">
+            IZVEJ VEČ
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 11L3 6h10z" fill="currentColor"/></svg>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="section panorama reveal" data-delay="60">
-      <img src="assets/bottom-hero.png" alt="Pogled na vrhove in Aljažev stolp" width="654" height="204" loading="lazy" decoding="async">
-    </section>
+    <section class="story-section" id="zgodba" aria-labelledby="story-heading">
+      <div class="story-container">
+        <header class="story-header reveal">
+          <h2 id="story-heading" class="story-title">ZGODBA, KI JE POVEZALA TRI SRCA<br>IN RODILA IDEJO TRI-GLAV</h2>
+        </header>
 
-    <section class="section contact-section" id="kontakt">
-      <div class="contact-copy reveal" data-delay="0">
-        <p class="eyebrow">Kontakt</p>
-        <h2>Želiš testirati TRI-GLAV ali sodelovati pri pilotu?</h2>
-        <p>Izpolni obrazec in pripravili bomo povratni kontakt. Ker je stran statična, obrazec odpre pripravljeno e-pošto v tvojem privzetem odjemalcu, zato deluje tudi brez strežniškega backend-a.</p>
-        <div class="contact-points">
-          <div>Za planince, društva in turistične partnerje</div>
-          <div>Primerno za objavo neposredno v public_html</div>
-          <div>Preprost prehod na zunanji form servis kasneje</div>
+        <div class="story-path-line" aria-hidden="true">
+          <svg class="story-path-svg" viewBox="0 0 4 1400" preserveAspectRatio="none">
+            <line x1="2" y1="0" x2="2" y2="1400" stroke="currentColor" stroke-width="2" stroke-dasharray="6 10"/>
+          </svg>
+        </div>
+
+        <ol class="story-steps">
+          <li class="story-step reveal" data-delay="0">
+            <div class="story-step-left">
+              <span class="story-step-num" aria-hidden="true">1</span>
+              <div class="story-step-icon story-step-icon--joze" aria-hidden="true"></div>
+              <h3 class="story-step-title">JOŽE</h3>
+              <p class="story-step-desc">Lokalni pohodnik.<br>Pozna gore, poti<br>in njihove skrivnosti.</p>
+            </div>
+            <div class="story-step-center">
+              <img src="assets/story-panel-1.jpg" alt="Jože na gorski poti z Julijskimi Alpami v ozadju" width="1024" height="192" loading="lazy" decoding="async">
+            </div>
+            <div class="story-step-right">
+              <p>Jože se odpravi na pot.<br>Gore so njegov dom.<br>Pozna jih.<br>Spoštuje jih.</p>
+            </div>
+          </li>
+
+          <li class="story-step reveal" data-delay="60">
+            <div class="story-step-left">
+              <span class="story-step-num" aria-hidden="true">2</span>
+              <div class="story-step-icon story-step-icon--couple" aria-hidden="true"></div>
+              <h3 class="story-step-title">MARIA IN PIERRE</h3>
+              <p class="story-step-desc">Popotnika iz tujine.<br>Polna navdušenja,<br>a brez poznavanja terena.</p>
+            </div>
+            <div class="story-step-center">
+              <img src="assets/story-panel-2.jpg" alt="Maria in Pierre na gorski poti" width="1024" height="192" loading="lazy" decoding="async">
+            </div>
+            <div class="story-step-right">
+              <p>Maria in Pierre raziskujeta Julijske Alpe.<br>Zaupata običajni navigaciji.<br>A pot ju vodi tja,<br>kamor ne bi smela …</p>
+            </div>
+          </li>
+
+          <li class="story-step reveal" data-delay="60">
+            <div class="story-step-left">
+              <span class="story-step-num" aria-hidden="true">3</span>
+              <div class="story-step-icon story-step-icon--danger" aria-hidden="true"></div>
+              <h3 class="story-step-title">NAPAČNA POT</h3>
+              <p class="story-step-desc">Pot ju pripelje na nevarno<br>mesto ob prepadu.<br>Signala ni.<br>Zaskrbljenost narašča.</p>
+            </div>
+            <div class="story-step-center">
+              <img src="assets/story-panel-4.jpg" alt="Maria in Pierre zgubita pot in signal na nevarnem terenu" width="1024" height="192" loading="lazy" decoding="async">
+            </div>
+            <div class="story-step-right">
+              <p>Zgrešena pot.<br>Prepad pred njima.<br>Brez signala.<br>Brez pravih informacij.<br>Samo negotovost.</p>
+            </div>
+          </li>
+
+          <li class="story-step reveal" data-delay="60">
+            <div class="story-step-left">
+              <span class="story-step-num" aria-hidden="true">4</span>
+              <div class="story-step-icon story-step-icon--eye" aria-hidden="true"></div>
+              <h3 class="story-step-title">JOŽE OPAZI</h3>
+              <p class="story-step-desc">Pravočasno ju opazi.<br>Razume situacijo.<br>Ne okleva.</p>
+            </div>
+            <div class="story-step-center">
+              <img src="assets/story-panel-5.jpg" alt="Jože opazi nevarnost in se odloči pomagati" width="1024" height="192" loading="lazy" decoding="async">
+            </div>
+            <div class="story-step-right">
+              <p>Jože ju opazi.<br>Razume nevarnost.<br>Odloči se pomagati.</p>
+            </div>
+          </li>
+
+          <li class="story-step reveal" data-delay="60">
+            <div class="story-step-left">
+              <span class="story-step-num" aria-hidden="true">5</span>
+              <div class="story-step-icon story-step-icon--connect" aria-hidden="true"></div>
+              <h3 class="story-step-title">POVEŽE JU</h3>
+              <p class="story-step-desc">Kljub različnim jezikom<br>najdejo način za<br>sporazumevanje.</p>
+            </div>
+            <div class="story-step-center">
+              <img src="assets/story-panel-6.jpg" alt="Jože, Maria in Pierre se povežejo kljub jezikovni oviro" width="1024" height="192" loading="lazy" decoding="async">
+            </div>
+            <div class="story-step-right">
+              <p>Z rokami, s prevajalnikom,<br>z nasmehom.<br>Različni jeziki,<br>isto razumevanje.</p>
+            </div>
+          </li>
+
+          <li class="story-step reveal" data-delay="60">
+            <div class="story-step-left">
+              <span class="story-step-num" aria-hidden="true">6</span>
+              <div class="story-step-icon story-step-icon--together" aria-hidden="true"></div>
+              <h3 class="story-step-title">SKUPAJ NAPREJ</h3>
+              <p class="story-step-desc">Skupaj nadaljujejo pot<br>proti vrhu.<br>Varnost. Zaupanje.<br>Povezanost.</p>
+            </div>
+            <div class="story-step-center">
+              <img src="assets/story-panel-7.jpg" alt="Trije sopotniki skupaj nadaljujejo pot proti vrhu" width="1024" height="192" loading="lazy" decoding="async">
+            </div>
+            <div class="story-step-right">
+              <p>Skupaj do vrha.<br>Ne kot tujci,<br>ampak kot prijatelji.</p>
+            </div>
+          </li>
+
+          <li class="story-step reveal" data-delay="60">
+            <div class="story-step-left">
+              <span class="story-step-num" aria-hidden="true">7</span>
+              <div class="story-step-icon story-step-icon--idea" aria-hidden="true"></div>
+              <h3 class="story-step-title">RODI SE IDEJA</h3>
+              <p class="story-step-desc">Na vrhu nastane ideja,<br>ki lahko pomaga<br>tisočem ljudem.</p>
+            </div>
+            <div class="story-step-center">
+              <img src="assets/story-panel-8.jpg" alt="Na vrhu se rodi ideja TRI-GLAV varnostnega ekosistema" width="1024" height="192" loading="lazy" decoding="async">
+            </div>
+            <div class="story-step-right">
+              <p>Tukaj, na vrhu Triglava,<br>se rodi ideja TRI-GLAV.<br>Več kot zemljevid.<br>Varnostni ekosistem.<br>Skupnost, tehnologija,<br>človečnost.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="story-finale reveal" aria-hidden="true">
+          <div class="story-finale-sos icon-sprite icon-sos" role="img" aria-label="SOS"></div>
         </div>
       </div>
-
-      <form class="contact-form reveal" data-delay="120" id="contact-form" novalidate>
-        <label>
-          <span>Ime in priimek</span>
-          <input type="text" name="name" placeholder="Tvoje ime" required>
-        </label>
-        <label>
-          <span>E-pošta</span>
-          <input type="email" name="email" placeholder="ime@primer.si" required>
-        </label>
-        <label>
-          <span>Telefon ali organizacija</span>
-          <input type="text" name="context" placeholder="Po želji">
-        </label>
-        <label>
-          <span>Sporočilo</span>
-          <textarea name="message" rows="5" placeholder="Na kratko opiši zanimanje za TRI-GLAV." required></textarea>
-        </label>
-        <button class="btn btn-primary" type="submit">Pošlji zanimanje</button>
-        <p class="form-note" id="form-status" aria-live="polite">Ob oddaji se odpre pripravljen e-mail za info@tri-glav.si.</p>
-      </form>
     </section>
 
-    <section class="section closing reveal" data-delay="40">
-      <p class="eyebrow">TRI-GLAV</p>
-      <h2>V gorah ni pomembno, kateri jezik govoriš.</h2>
-      <p>Pomembno je, da se vsi varno vrnemo domov.</p>
+    <section class="cards-section" aria-label="Informacijske kartice">
+      <div class="cards-grid">
+        <article class="info-card reveal" id="zakaj-tri-glav" data-delay="0">
+          <div class="info-card-icon icon-sprite icon-safety" role="img" aria-label="Varnost"></div>
+          <h3 class="info-card-title">ZAKAJ TRI-GLAV?</h3>
+          <p class="info-card-text">Ker klasični zemljevidi in aplikacije niso dovolj. Potrebujemo več – skupnost, informacije in pravo pomoč.</p>
+          <a class="info-card-link" href="#zakaj-tri-glav">VEČ INFORMACIJ →</a>
+        </article>
+
+        <article class="info-card reveal" id="ekosistem" data-delay="80">
+          <div class="info-card-icon icon-sprite icon-ecosystem" role="img" aria-label="Ekosistem"></div>
+          <h3 class="info-card-title">VARNOSTNI EKOSISTEM</h3>
+          <p class="info-card-text">Informacije, prijava težav, SOS pomoč, skupnost in preverjeni lokalni viri – vse na enem mestu.</p>
+          <a class="info-card-link" href="#ekosistem">VEČ INFORMACIJ →</a>
+        </article>
+
+        <article class="info-card reveal" id="pilot-slovenija" data-delay="160">
+          <div class="info-card-icon icon-sprite icon-pilot" role="img" aria-label="Pilot Slovenija"></div>
+          <h3 class="info-card-title">PILOT SLOVENIJA</h3>
+          <p class="info-card-text">Začenjamo doma. Testiramo. Učimo se. Rastemo skupaj.</p>
+          <a class="info-card-link" href="#pilot-slovenija">VEČ INFORMACIJ →</a>
+        </article>
+
+        <article class="info-card reveal" id="pridruzi-se" data-delay="240">
+          <div class="info-card-icon info-card-icon--app" role="img" aria-label="Ekipa">
+            <img src="assets/app-icon.png" alt="" width="56" height="64" loading="lazy" decoding="async">
+          </div>
+          <h3 class="info-card-title">IŠČEMO ŠE 2 GLAVI</h3>
+          <p class="info-card-text">Za popoln ekosistem iščemo še dve ključni »glavi«. Pridruži se ustvarjanju prihodnosti.</p>
+          <a class="info-card-link" href="mailto:info@tri-glav.si?subject=Pridru%C5%BEitev%20ekipi%20TRI-GLAV">VEČ INFORMACIJ →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="support-section" id="podpora" aria-labelledby="support-heading">
+      <div class="support-shell">
+        <div class="support-main reveal" data-delay="0">
+          <div class="support-heart icon-sprite icon-heart" role="img" aria-label="Podpora"></div>
+          <h2 id="support-heading" class="support-title">PODPRI NAŠO POT</h2>
+          <p class="support-desc">TRI-GLAV nastaja s srcem in prostovoljstvom. Tvoja podpora nam pomaga razvijati tehnologijo, testirati rešitve in širiti varnost med ljudi.</p>
+          <a class="btn btn-support" href="mailto:info@tri-glav.si?subject=Donacija%20TRI-GLAV">PODPRI Z DONACIJO</a>
+        </div>
+
+        <ul class="support-categories reveal" data-delay="120">
+          <li>
+            <div class="support-cat-icon icon-sprite icon-dev" role="img" aria-label="Razvoj"></div>
+            <span>Razvoj in tehnologija</span>
+          </li>
+          <li>
+            <div class="support-cat-icon icon-sprite icon-field" role="img" aria-label="Testiranje"></div>
+            <span>Testiranje na terenu</span>
+          </li>
+          <li>
+            <div class="support-cat-icon icon-sprite icon-edu" role="img" aria-label="Izobraževanje"></div>
+            <span>Izobraževanje in vsebine</span>
+          </li>
+          <li>
+            <div class="support-cat-icon icon-sprite icon-free" role="img" aria-label="Skupnost"></div>
+            <span>Brezplačno za uporabnike</span>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <img src="assets/logo-footer-mono.png" alt="TRI-GLAV" width="274" height="194" loading="lazy" decoding="async">
-    <p>© TRI-GLAV. Pametni gorski navigator za varnejša doživetja.</p>
+    <div class="footer-shell">
+      <div class="footer-brand">
+        <img src="assets/logo-footer-mono.png" alt="TRI-GLAV" width="274" height="194" loading="lazy" decoding="async">
+        <p class="footer-slogan">Varno na poti. Varno domov.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="TRI-GLAV povezave">
+        <h3 class="footer-nav-title">TRI-GLAV</h3>
+        <ul>
+          <li><a href="#zgodba">Zgodba</a></li>
+          <li><a href="#zakaj-tri-glav">O projektu</a></li>
+          <li><a href="#pridruzi-se">Ekipa</a></li>
+          <li><a href="mailto:info@tri-glav.si?subject=Novice%20TRI-GLAV">Novice</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Pomoč in podpora">
+        <h3 class="footer-nav-title">POMOČ IN PODPORA</h3>
+        <ul>
+          <li><a href="#zakaj-tri-glav">Pogosta vprašanja</a></li>
+          <li><a href="mailto:info@tri-glav.si">Kontakt</a></li>
+          <li><a href="#ekosistem">Varnostni nasveti</a></li>
+          <li><a href="mailto:info@tri-glav.si?subject=Pravila%20uporabe">Pravila uporabe</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <h3 class="footer-nav-title">SLEDI NAM</h3>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.845c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.971h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.851s-.012 3.585-.07 4.851c-.062 1.366-.334 2.633-1.308 3.608-.975.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.585-.012-4.851-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.975-1.246-2.242-1.308-3.608C2.175 15.749 2.163 15.369 2.163 12s.012-3.585.07-4.851c.062-1.366.334-2.633 1.308-3.608.975-.974 2.242-1.246 3.608-1.308C8.415 2.175 8.796 2.163 12 2.163M12 0C8.741 0 8.333.014 7.053.072 5.775.132 4.602.333 3.635 1.3 2.668 2.267 2.467 3.44 2.407 4.718 2.347 5.998 2.333 6.406 2.333 12c0 5.594.014 6.002.072 7.282.06 1.278.261 2.451 1.228 3.418.967.967 2.14 1.168 3.418 1.228 1.28.058 1.689.072 7.282.072s6.002-.014 7.282-.072c1.278-.06 2.451-.261 3.418-1.228.967-.967 1.168-2.14 1.228-3.418.058-1.28.072-1.689.072-7.282s-.014-6.002-.072-7.282c-.06-1.278-.261-2.451-1.228-3.418-.967-.967-2.14-1.168-3.418-1.228C15.998.014 15.589 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-egr">
+        <p class="footer-egr-label">Part of the EGR Community</p>
+        <p class="footer-egr-slogan">EXPLORE. GROW. RISE.</p>
+      </div>
+    </div>
+
+    <p class="footer-copy">© TRI-GLAV</p>
   </footer>
 
   <script src="script.js"></script>
