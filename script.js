@@ -104,7 +104,7 @@ if (contactForm && formStatus) {
       return;
     }
 
-    const subject = encodeURIComponent(`TRI-GLAV pilotni dostop - ${name}`);
+    const subject = encodeURIComponent(`TRI-GLAV sodelovanje - ${name}`);
     const body = encodeURIComponent(
       [
         `Ime: ${name}`,
