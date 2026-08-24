@@ -9,4 +9,4 @@ Official public presentation for TRI-GLAV, a mountain-safety product concept in 
 - TRI-GLAV is not connected to the emergency number 112 and does not replace official emergency channels.
 - In an emergency, always call 112.
 
-The website invites hikers, clubs and partners to discuss a narrow, verifiable field pilot. Private KORA source, governance material and investor-only evidence are intentionally excluded from this public repository.
+The website invites hikers, clubs and partners to discuss a narrow, verifiable field pilot. Private technical implementation, governance records and investor-only evidence are intentionally excluded from this public repository.
