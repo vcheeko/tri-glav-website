@@ -105,7 +105,7 @@ a {
 }
 
 .brand img {
-  width: 156px;
+  width: 184px;
   height: auto;
 }
 
@@ -299,6 +299,31 @@ h3 {
   line-height: 1.7;
 }
 
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(7, 20, 38, 0.52);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.status-pill span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--orange-500);
+  box-shadow: 0 0 0 5px rgba(239, 143, 55, 0.16);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -339,6 +364,7 @@ h3 {
 .panorama,
 .trust-strip,
 .qr-card,
+.progress-card,
 .phone-frame {
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
@@ -346,16 +372,35 @@ h3 {
 }
 
 .hero-logo-card {
-  width: min(320px, 78%);
+  width: min(420px, 88%);
   margin-left: auto;
-  padding: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(14px);
 }
 
 .hero-logo-card img {
   width: 100%;
   height: auto;
+}
+
+.hero-status {
+  display: grid;
+  gap: 5px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(12, 40, 72, 0.12);
+}
+
+.hero-status strong {
+  color: var(--navy-900);
+  font-size: 0.95rem;
+}
+
+.hero-status span {
+  color: var(--ink-700);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .hero-story-card {
@@ -634,12 +679,6 @@ h3 {
   font-size: 1.15rem;
 }
 
-.store-badge:hover,
-.store-badge:focus-visible {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.12);
-}
-
 .app-meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -692,6 +731,34 @@ h3 {
   font-size: 0.92rem;
   font-weight: 800;
   text-align: center;
+}
+
+.progress-card {
+  display: grid;
+  gap: 8px;
+  width: min(230px, 100%);
+  padding: 20px;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--navy-900);
+}
+
+.progress-card span {
+  margin-top: 8px;
+  color: var(--green-500);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.progress-card span:first-child {
+  margin-top: 0;
+}
+
+.progress-card strong {
+  font-size: 0.96rem;
+  line-height: 1.4;
 }
 
 .panorama {
@@ -780,6 +847,29 @@ h3 {
   color: var(--green-500);
 }
 
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.profile-links a {
+  padding: 10px 13px;
+  border: 1px solid rgba(17, 32, 49, 0.12);
+  border-radius: 999px;
+  color: var(--navy-900);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.profile-links a:hover,
+.profile-links a:focus-visible {
+  border-color: rgba(46, 165, 109, 0.42);
+  background: rgba(46, 165, 109, 0.08);
+}
+
 .closing {
   text-align: center;
   padding-bottom: 88px;
@@ -791,14 +881,23 @@ h3 {
 }
 
 .site-footer img {
-  width: 136px;
+  width: min(340px, 78%);
   height: auto;
-  margin: 0 auto 10px;
+  margin: 0 auto 18px;
 }
 
 .site-footer p {
   margin: 0;
   color: var(--ink-700);
+}
+
+.site-footer .footer-community {
+  margin-top: 6px;
+  color: var(--green-500);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .reveal {
@@ -929,7 +1028,8 @@ h3 {
     justify-items: start;
   }
 
-  .qr-card {
+  .qr-card,
+  .progress-card {
     width: min(200px, 100%);
   }
 }
@@ -952,12 +1052,13 @@ h3 {
   .hero-logo-card,
   .hero-story-card,
   .phone-frame,
-  .qr-card {
+  .qr-card,
+  .progress-card {
     border-radius: 22px;
   }
 
   .brand img {
-    width: 132px;
+    width: 154px;
   }
 
   .hero {
