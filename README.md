@@ -1,5 +1,7 @@
 # TRI-GLAV
 
+[![quality](https://github.com/vcheeko/tri-glav-website/actions/workflows/quality.yml/badge.svg?branch=main)](https://github.com/vcheeko/tri-glav-website/actions/workflows/quality.yml)
+
 **Varno na poti. Varno domov.**
 
 TRI-GLAV is an outdoor-safety product concept focused on helping people prepare better, understand mountain conditions and make safer decisions before and during a trip.
@@ -53,16 +55,37 @@ The current site is intentionally lightweight and dependency-free:
 
 There is currently **no application backend behind the contact form** and no claim of formal accessibility compliance.
 
+## Engineering evidence
+
+The public `quality` GitHub Actions workflow runs on pull requests and pushes to `main`.
+
+It currently verifies:
+
+- document identity, Slovenian language metadata and title;
+- description, robots, canonical, Open Graph and Twitter metadata presence;
+- local asset references exist and do not escape repository scope;
+- no `javascript:` asset/link URLs are accepted by the static check;
+- images have non-empty alt text;
+- core HTML IDs are unique and expected section targets exist;
+- internal hash links resolve to existing IDs;
+- external HTTP references are rejected in favor of HTTPS;
+- the README keeps the boundary between the implemented website and unimplemented mobile/emergency capabilities visible;
+- `script.js` passes Node syntax validation.
+
+The quality badge represents these repository checks only. It is **not** a certification of accessibility, mountain-safety correctness, emergency reliability or future application features.
+
 ## Repository structure
 
 ```text
 tri-glav-website/
-├── index.html              # page structure and metadata
-├── styles.css              # responsive presentation
-├── script.js               # navigation, reveal behavior and contact flow
-├── assets/                 # imagery, logos and visual assets
-├── public_html-ready/      # hosting-oriented copy/export
-├── CODEX_PROMPT.md         # retained AI-development prompt context
+├── .github/workflows/       # automated repository quality checks
+├── tests/                   # dependency-free static quality tests
+├── index.html               # page structure and metadata
+├── styles.css               # responsive presentation
+├── script.js                # navigation, reveal behavior and contact flow
+├── assets/                  # imagery, logos and visual assets
+├── public_html-ready/       # hosting-oriented copy/export
+├── CODEX_PROMPT.md          # retained AI-development prompt context
 └── README.md
 ```
 
@@ -78,6 +101,13 @@ python -m http.server 8000
 
 Then open `http://localhost:8000`.
 
+Run the repository checks locally with:
+
+```bash
+python -m unittest discover -s tests -p 'test_*.py' -v
+node --check script.js
+```
+
 ## AI-assisted development disclosure
 
 AI tools are used extensively in the TRI-GLAV workflow for ideation, implementation assistance, critique and iteration.
@@ -86,15 +116,14 @@ The project is not presented as evidence that every line was manually typed by t
 
 ## Current engineering priorities
 
-Before treating the website as a stronger production surface, useful next steps include:
+The next useful engineering steps are:
 
-1. automated HTML / link / accessibility checks;
-2. browser and responsive regression testing;
-3. image and performance optimization;
+1. real browser and responsive regression testing rather than static inspection alone;
+2. automated accessibility tooling in addition to the current basic structural checks;
+3. image and performance optimization with measurable budgets;
 4. privacy-conscious analytics if needed;
 5. replacement of the `mailto:` pilot flow with a validated backend or form service if real submissions need reliable collection;
-6. clearer separation between website evidence and future mobile-app capabilities;
-7. documented release and deployment checks.
+6. documented deployment/release checks and PR-first change discipline.
 
 ## Product-development principle
 
