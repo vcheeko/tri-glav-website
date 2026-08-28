@@ -18,8 +18,10 @@ The website presents the product direction, pilot-interest flow and visual ident
 
 ## Live site
 
-- [TRI-GLAV GitHub Pages](https://vcheeko.github.io/tri-glav-website/)
-- Product domain: `tri-glav.si`
+- **Official public site:** [www.tri-glav.si](https://www.tri-glav.si/)
+- [GitHub Pages preview](https://vcheeko.github.io/tri-glav-website/)
+
+The `tri-glav.si` domain is the current public-facing TRI-GLAV website. The GitHub Pages URL is retained as a repository-hosted preview/reference and should not be treated as the primary public URL.
 
 ## Product vision
 
