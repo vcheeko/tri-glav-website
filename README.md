@@ -6,20 +6,30 @@
 
 TRI-GLAV is an outdoor-safety product concept focused on helping people prepare better, understand mountain conditions and make safer decisions before and during a trip.
 
-This repository currently contains the **public TRI-GLAV landing page**, not the finished mobile application.
+## Source-of-truth boundary
+
+- **Primary live domain:** [www.tri-glav.si](https://www.tri-glav.si/)
+- **Status of the primary live domain:** public work in progress, not the finished project
+- **This repository:** the first public website variant and its development history
+- **GitHub Pages:** a historical preview of that first variant, not the canonical live site
+
+A commit or deployment from this repository must not be described as an update to `www.tri-glav.si` unless the domain's actual production source and deployment were explicitly synchronized and verified.
 
 ## Current status
 
-**Public implementation:** responsive static website  
+**This repository:** responsive static first-concept website  
+**Primary domain:** work-in-progress public site  
 **Mobile application:** product concept / future development  
 **Production emergency system:** not implemented
 
-The website presents the product direction, pilot-interest flow and visual identity. Product concepts described on the site — including offline navigation, contextual weather information, hazards, community reports and SOS support — should not be interpreted as already released application capabilities.
+Neither the repository site nor the current primary-domain presentation is the finished mobile application.
 
-## Live site
+Product concepts described in public materials — including offline navigation, contextual weather information, hazards, community reports, live location and SOS support — must not be interpreted as already released or safety-verified application capabilities.
 
-- [TRI-GLAV GitHub Pages](https://vcheeko.github.io/tri-glav-website/)
-- Product domain: `tri-glav.si`
+## Public links
+
+- [Primary live domain — work in progress](https://www.tri-glav.si/)
+- [Historical GitHub Pages preview](https://vcheeko.github.io/tri-glav-website/)
 
 ## Product vision
 
@@ -36,11 +46,11 @@ The longer-term product direction includes:
 - check-ins and safety-oriented trip state;
 - fast access to emergency information and support.
 
-These are **product goals**, not claims that the current website already provides them.
+These are **product goals**, not claims that the current websites already provide them.
 
 ## What is implemented in this repository
 
-The current site is intentionally lightweight and dependency-free:
+This first website concept is intentionally lightweight and dependency-free:
 
 - semantic HTML landing-page structure;
 - responsive CSS layout;
@@ -118,16 +128,17 @@ The project is not presented as evidence that every line was manually typed by t
 
 The next useful engineering steps are:
 
-1. real browser and responsive regression testing rather than static inspection alone;
-2. automated accessibility tooling in addition to the current basic structural checks;
-3. image and performance optimization with measurable budgets;
-4. privacy-conscious analytics if needed;
-5. replacement of the `mailto:` pilot flow with a validated backend or form service if real submissions need reliable collection;
-6. documented deployment/release checks and PR-first change discipline.
+1. identify and document the canonical production source for `www.tri-glav.si`;
+2. real browser and responsive regression testing rather than static inspection alone;
+3. automated accessibility tooling in addition to the current basic structural checks;
+4. image and performance optimization with measurable budgets;
+5. privacy-conscious analytics if needed;
+6. replacement of the `mailto:` pilot flow with a validated backend or form service if real submissions need reliable collection;
+7. documented deployment/release checks and PR-first change discipline.
 
 ## Product-development principle
 
-TRI-GLAV is safety-oriented. That means future emergency, location and hazard features should be held to a much higher verification standard than ordinary marketing-site functionality.
+TRI-GLAV is safety-oriented. Future emergency, location and hazard features should be held to a much higher verification standard than ordinary marketing-site functionality.
 
 A polished interface is not evidence that a safety feature works.
 
