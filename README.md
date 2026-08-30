@@ -22,7 +22,7 @@ A commit or deployment from this repository must not be described as an update t
 **Mobile application:** product concept / future development  
 **Production emergency system:** not implemented
 
-Neither the repository site nor the current primary-domain presentation is the finished mobile application.
+The repository site and current primary-domain presentation are **not the finished mobile application**.
 
 Product concepts described in public materials — including offline navigation, contextual weather information, hazards, community reports, live location and SOS support — must not be interpreted as already released or safety-verified application capabilities.
 
