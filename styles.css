@@ -1031,3 +1031,22 @@ h3 {
     transform: none;
   }
 }
+
+
+.project-status-banner {
+  position: relative;
+  z-index: 1001;
+  padding: 0.7rem 1rem;
+  background: #f6c84c;
+  color: #0a223f;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.project-status-banner a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
