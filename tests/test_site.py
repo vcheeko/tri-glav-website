@@ -77,7 +77,7 @@ class StaticSiteQualityTests(unittest.TestCase):
     def test_required_metadata_is_present(self) -> None:
         meta_by_name = {item.get("name"): item for item in self.parser.meta if item.get("name")}
         self.assertTrue(meta_by_name.get("description", {}).get("content", "").strip())
-        self.assertEqual(meta_by_name.get("robots", {}).get("content"), "index,follow")
+        self.assertEqual(meta_by_name.get("robots", {}).get("content"), "noindex,follow")
         self.assertIn('rel="canonical" href="https://tri-glav.si/"', self.html)
         self.assertIn('property="og:title"', self.html)
         self.assertIn('name="twitter:card"', self.html)
