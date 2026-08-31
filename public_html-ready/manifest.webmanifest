@@ -1,0 +1,18 @@
+{
+  "name": "TRI-GLAV – razvojni koncept",
+  "short_name": "TRI-GLAV",
+  "description": "Razvojni koncept TRI-GLAV. Ne nadomešča številke 112 ali uradnih gorskih reševalnih poti.",
+  "lang": "sl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a223f",
+  "theme_color": "#0a223f",
+  "icons": [
+    {
+      "src": "assets/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}
