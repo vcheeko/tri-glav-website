@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import unittest
 from collections import Counter
@@ -127,6 +128,26 @@ class StaticSiteQualityTests(unittest.TestCase):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn("not the finished mobile application", readme)
         self.assertIn("Production emergency system:** not implemented", readme)
+
+    def test_deploy_mirror_matches_root_shell(self) -> None:
+        mirror = ROOT / "public_html-ready"
+        for relative in ("index.html", "styles.css", "script.js", "manifest.webmanifest", "service-worker.js"):
+            self.assertEqual(
+                (ROOT / relative).read_bytes(),
+                (mirror / relative).read_bytes(),
+                f"Deploy mirror drift: {relative}",
+            )
+
+    def test_pwa_shell_is_bounded_and_honest(self) -> None:
+        manifest = json.loads((ROOT / "manifest.webmanifest").read_text(encoding="utf-8"))
+        worker = (ROOT / "service-worker.js").read_text(encoding="utf-8")
+        self.assertEqual(manifest.get("start_url"), "./")
+        self.assertIn("Ne nadomešča številke 112", manifest.get("description", ""))
+        self.assertIn('rel="manifest" href="manifest.webmanifest"', self.html)
+        self.assertIn('navigator.serviceWorker.register("./service-worker.js")', self.html)
+        self.assertIn('url.origin !== self.location.origin', worker)
+        self.assertIn('request.mode === "navigate"', worker)
+        self.assertNotIn("offline maps are available", worker.lower())
 
 
 if __name__ == "__main__":
